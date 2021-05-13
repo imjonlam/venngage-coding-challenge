@@ -22,6 +22,11 @@ function snap(id, nodeIDs, axis, tolerance) {
   const node = new Node(id);
   let nodes = Node.getNodes(nodeIDs.filter(i => i != node.id));
 
+  /** alignment priority:
+   * 1. viewport outer boundary
+   * 2. neighbouring nodes
+   * 3. viewport center
+  **/
   const status = (
     snapToViewport(node, axis, tolerance, outer=true) ||
     snapToNodes(node, nodes, axis, tolerance) ||

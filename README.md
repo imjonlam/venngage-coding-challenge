@@ -16,6 +16,9 @@ This repository contains the functions required to implement an alignment featur
   * `axis`: the axis the element being draged is moving
     * `0`: moving along x-axis
     * `1`: moving along y-axis
+  * `tolerance`: the space in pixels between two Nodes (or node and viewport) for aligning to occur
+  * **returns** the new coordinates that the element should be set to.
+    * If no alignment occured, the old coordinates are returned.
 
 ## Assumptions
 * Data for each item used for calculations will be retrieved using a [DomRect](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect). 
