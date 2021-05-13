@@ -1,4 +1,5 @@
 # Venngage Coding Challenge
+[![codecov](https://codecov.io/gh/imjonlam/venngage-coding-challenge/branch/main/graph/badge.svg?token=7OI2I2B2GI)](https://codecov.io/gh/imjonlam/venngage-coding-challenge)
 
 ## Description
 This repository contains the functions required to implement an alignment feature where a user can drag and drop items and automatically be aligned with its closest node (or viewport).
@@ -9,7 +10,7 @@ This repository contains the functions required to implement an alignment featur
 
 ## Overview
 * The main functions can be found [here](./scripts/utils.js) and use a [Node class](./components/Node.js) to represent each item
-* Entry function is [snap(id, nodeIDs, axis, tolerance)](./scripts/utils.js#L14)
+* Entry function is [snap(id, nodeIDs, axis, tolerance)](./scripts/utils.js#L20)
   * `id`: the element ID of the currently dragged item
   * `nodeIDs`: an array of element IDs in the viewport (or you want to attempt to align with)
   * `axis`: the axis the element being draged is moving
@@ -25,4 +26,4 @@ This repository contains the functions required to implement an alignment featur
   2. An item can align to it's nearest neighbour
   3. An item can align to the middle of the viewport
 * Whenever an item is being dragged, it is moving along **only one axis**. In cases where an item is moving diagonally, this is a sequential combination of left/right and up/down movements.
-  * In such cases, you may wish to invoke the function [snap](./scripts/utils.js#L14) twice.
+  * In such cases, you may wish to invoke the function [snap](./scripts/utils.js#L20) twice.
